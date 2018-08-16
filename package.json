@@ -1,6 +1,6 @@
 {
-  "name": "can-counter",
-  "description": "Counting cans",
+  "name": "guest-counter",
+  "description": "Counting bbq guests",
   "version": "1.0.0",
   "author": "Dale Palmer <dpalmerpdx@gmail.com>",
   "dependencies": {
