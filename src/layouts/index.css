@@ -629,6 +629,7 @@ pre tt:after {
   #left {
     width: 100% !important;
     height: 300px;
+    margin-bottom: 2em;
   }
 
   #right {
