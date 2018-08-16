@@ -37,5 +37,5 @@ module.exports = {
       }
     }
   }],
-  pathPrefix: `/can_counter`,
+  pathPrefix: `/guest_counter`,
 }
