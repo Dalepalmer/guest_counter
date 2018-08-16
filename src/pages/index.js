@@ -24,8 +24,10 @@ const chartOptions = {
                 label: function(tooltipItem, data) {
                     var total = (data.datasets[0].data).reduce((a, b) => a + b, 0)
                     var label = data.labels[tooltipItem.index] || '';
+                    label += ' : ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + " Guests"
                     label += ' : ' + Math.abs(Math.round(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] / total * 100))
                     label += '%'
+                    
                     return label;
                 },
              }
@@ -45,23 +47,38 @@ const chartOptions = {
             textMargin: 10
           },
       }
-const chartData = {labels: ["Cans in dollars"],
+const chartData = {labels: ["Guests RSVPed Yes", "Guests who have not", "Guest who said no"],
     datasets: [
 
-    {data: [10, 90],
-    backgroundColor: ["#80cbc4", "#b0bec5"],
-    labels: ["Percentage Collected", "Percentage Remaining"]}
+    {data: [4, 22, 1],
+    backgroundColor: ["#4caf50", "#f5f5f5", "#d32f2f"],
+    labels: ["Percentage RSVPed", "Percentage who haven't replied"]}
+    ]}
+
+    const chartData2 = {labels: ["Guests who have showed up", "Guests who didn't show up", "Guests who did show up and said they wouldn't", "Guests who didn't show up and said they would"],
+    datasets: [
+
+    {data: [0, 22, 0, 0],
+    backgroundColor: ["#558b2f", "#f5f5f5", "#00838f", "#ef5350"],
+    labels: ["Percentage who actually came", "people who didn't show up", "people who showed up and said they wouldn't", "bailers"]}
     ]}
 
 const IndexPage = () => (
   <div>
-    <p>Welcome to our can collection counter.</p>
-    <p>A group of friends and I are collecting cans for whimsical things to make our lives more vibrant. Here I will document out process</p>
+    <p>Welcome to the BBQ guest counter.</p>
     <div>
 
     </div>
-
+    <div id="container">
+    <div id="left">
+    <p># of Guests who have submitted an RSVP</p>
     <Doughnut data={chartData} options={chartOptions}  />
+    </div>
+    <div id="right">
+    <p># of People who showed up</p>
+    <Doughnut data={chartData2} options={chartOptions}  />
+    </div>
+    </div>
   </div>
 )
 

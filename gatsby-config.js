@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Can Counter',
+    title: 'Guest Counter',
   },
   plugins: [
   	'gatsby-plugin-react-helmet',

@@ -12,8 +12,8 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Fun blog site by Dale Palmer' },
-        { name: 'keywords', content: 'recycling, can collection, bikes' },
+        { name: 'description', content: 'Counting People' },
+        { name: 'keywords', content: 'Guests, bbq' },
       ]}
       link={[
         { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
@@ -23,7 +23,7 @@ const Layout = ({ children, data }) => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 1200,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
