@@ -621,6 +621,20 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+
+  #container {
+    width: unset;
+  }
+
+  #left {
+    width: 100% !important;
+    height: 300px;
+  }
+
+  #right {
+    width: 100% !important;
+    height: 300px;
+  }
 }
 
 #container {

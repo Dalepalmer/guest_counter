@@ -52,15 +52,15 @@ const chartData = {labels: ["Guests RSVPed Yes", "Guests who have not", "Guest w
 
     {data: [4, 22, 1],
     backgroundColor: ["#4caf50", "#f5f5f5", "#d32f2f"],
-    labels: ["Percentage RSVPed", "Percentage who haven't replied"]}
+    labels: ["% RSVPed", "% who haven't replied", "% no"]}
     ]}
 
-    const chartData2 = {labels: ["Guests who have showed up", "Guests who didn't show up", "Guests who did show up and said they wouldn't", "Guests who didn't show up and said they would"],
+    const chartData2 = {labels: ["Guests who have showed up", "% who didn't show up", "% who did show up and said no", "% didn't show up and said yes"],
     datasets: [
 
     {data: [0, 22, 0, 0],
     backgroundColor: ["#558b2f", "#f5f5f5", "#00838f", "#ef5350"],
-    labels: ["Percentage who actually came", "people who didn't show up", "people who showed up and said they wouldn't", "bailers"]}
+    labels: ["% showed up", "% didn't show up", "people who showed up and said they wouldn't", "bailers"]}
     ]}
 
 const IndexPage = () => (
@@ -72,11 +72,11 @@ const IndexPage = () => (
     <div id="container">
     <div id="left">
     <p># of Guests who have submitted an RSVP</p>
-    <Doughnut data={chartData} options={chartOptions}  />
+    <Doughnut data={chartData} options={chartOptions} height={250} />
     </div>
     <div id="right">
     <p># of People who showed up</p>
-    <Doughnut data={chartData2} options={chartOptions}  />
+    <Doughnut data={chartData2} options={chartOptions} height={275} />
     </div>
     </div>
   </div>
