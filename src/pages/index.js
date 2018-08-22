@@ -50,7 +50,7 @@ const chartOptions = {
 const chartData = {labels: ["Guests RSVPed Yes", "Guests who have not", "Guest who said no"],
     datasets: [
 
-    {data: [4, 22, 1],
+    {data: [6, 22, 1],
     backgroundColor: ["#4caf50", "#f5f5f5", "#d32f2f"],
     labels: ["% RSVPed", "% who haven't replied", "% no"]}
     ]}
@@ -58,7 +58,7 @@ const chartData = {labels: ["Guests RSVPed Yes", "Guests who have not", "Guest w
     const chartData2 = {labels: ["Guests who have showed up", "% who didn't show up", "% who did show up and said no", "% didn't show up and said yes"],
     datasets: [
 
-    {data: [0, 22, 0, 0],
+    {data: [8, 22, 2, 0],
     backgroundColor: ["#558b2f", "#f5f5f5", "#00838f", "#ef5350"],
     labels: ["% showed up", "% didn't show up", "people who showed up and said they wouldn't", "bailers"]}
     ]}
